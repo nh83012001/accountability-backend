@@ -37,18 +37,18 @@ ActiveRecord::Schema.define(version: 20180112190305) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_tasks", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "task_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
-  end
-
-  create_table "usertasks", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "task_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
