@@ -1,5 +1,5 @@
 class TaskSerializer < ActiveModel::Serializer
-  attributes :description
+  attributes :name,:description
   has_many :likes
-  has_many :commentss
+  has_many :comments
 end
