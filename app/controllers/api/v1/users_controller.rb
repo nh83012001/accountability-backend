@@ -13,7 +13,9 @@ class Api::V1::UsersController < ActionController::API
 
   def create
     @user = User.create(username: params[:username], password: params[:password] )
-    render json: @user.to_json
+    payload = {user_id: user.id}
+    token = issue_token(payload)
+    render json: { jwt: token, yay: true, user: @user }.to_json, status: 200
   end
 
   def update

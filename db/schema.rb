@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20180112190305) do
 
-
   create_table "comments", force: :cascade do |t|
     t.integer "task_id"
     t.text "description"
