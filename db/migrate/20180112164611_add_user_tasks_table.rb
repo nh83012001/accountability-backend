@@ -1,4 +1,4 @@
-class AddUsersTasksTable < ActiveRecord::Migration[5.1]
+class AddUserTasksTable < ActiveRecord::Migration[5.1]
   def change
     create_table :user_tasks do |t|
       t.integer :user_id
